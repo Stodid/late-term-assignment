@@ -13,3 +13,10 @@ Gradle
 
 * Instructions for Mac using Homebrew:
     brew install gradle
+
+
+Heroku
+--------
+
+* Install Heroku Toolbelt for Linux:
+    wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
