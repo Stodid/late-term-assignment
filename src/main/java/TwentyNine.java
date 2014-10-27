@@ -7,7 +7,7 @@ public class TwentyNine {
 
     public static void main(String args[]) {
         TwentyNine tn = new TwentyNine();
-        System.out.println("this is such a test now");
+        System.out.println("Testing out Gradle and Travis, speaking together in harmony");
         output();
     }
 }
