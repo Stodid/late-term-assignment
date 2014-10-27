@@ -10,6 +10,10 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 
+// Apply the application plugin to make our jar runnable
+apply plugin: 'application'
+mainClassName = 'lateterm.TwentyNine'
+
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use 'jcenter' for resolving your dependencies.
@@ -43,4 +47,13 @@ gradle.taskGraph.whenReady {taskGraph ->
     } else {
         version = '1.0-SNAPSHOT'
     }
+}
+
+jar {
+    baseName = 'app'
+    version = '0.1'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.1'
 }
