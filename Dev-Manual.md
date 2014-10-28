@@ -23,6 +23,6 @@ Heroku
 
 To install and run on a fresh Ubuntu 14.04 machine
 ------------------------------------
-sudo apt-get update && apt-get install default-jdk
+sudo apt-get update && sudo apt-get install default-jdk
 ./gradlew build
 ./run.sh
