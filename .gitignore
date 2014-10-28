@@ -21,3 +21,6 @@ hs_err_pid*
 
 # Gradle directory
 .gradle
+
+# Build reports
+build/reports/
