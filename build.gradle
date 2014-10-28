@@ -12,7 +12,8 @@ apply plugin: 'java'
 
 // Apply the application plugin to make our jar runnable
 apply plugin: 'application'
-mainClassName = 'lateterm.TwentyNine'
+//mainClassName = 'lateterm.TwentyNine'
+mainClassName = 'is.stodid.tictactoe.Game'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
