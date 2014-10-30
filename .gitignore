@@ -20,7 +20,7 @@ hs_err_pid*
 *.bin
 
 # Gradle directory
-.gradle
+.gradle/
 
 # Build reports
 build/reports/

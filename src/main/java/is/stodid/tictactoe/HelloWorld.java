@@ -8,7 +8,7 @@ import spark.servlet.SparkApplication;
 
 public class HelloWorld implements SparkApplication{ 
     public void init() {
-        Spark.get(new Route("/hello") {
+        Spark.get(new Route("/") {
             @Override
             public Object handle(Request request, Response response) {
                 return "Hello World!";
