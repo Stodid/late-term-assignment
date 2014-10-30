@@ -1,9 +1,7 @@
 package is.stodid.tictactoe;
 
-import spark.Request;
-import spark.Response;
-import spark.Route;
-import spark.Spark;
+import spark.*;
+import static spark.Spark.*;
 import spark.servlet.SparkApplication;
 
 public class HelloWorld implements SparkApplication{ 
