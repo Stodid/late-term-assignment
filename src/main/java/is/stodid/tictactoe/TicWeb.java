@@ -14,7 +14,7 @@ public class TicWeb implements SparkApplication{
         tic.init();
     }
     public void init() {
-        Spark.get(new Route("/") {
+        get(new Route("/") {
             @Override
             public Object handle(Request request, Response response) {
                 return "Tic!";
