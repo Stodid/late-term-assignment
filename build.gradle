@@ -1,16 +1,17 @@
 apply plugin: 'java'
-
 apply plugin: 'application'
+apply plugin: 'groovy'
 
 repositories {
     jcenter()
+    mavenCentral()
 }
 
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.5'
-
     testCompile 'junit:junit:4.11'
-
+    compile 'org.codehaus.groovy:groovy-all:2.3.6'
+    compile 'com.sparkjava:spark-template-freemarker:1.0'
     compile 'com.sparkjava:spark-core:1.1.1'
 }
 
