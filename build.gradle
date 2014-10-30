@@ -14,7 +14,7 @@ dependencies {
     compile 'com.sparkjava:spark-core:1.1.1'
 }
 
-mainClassName = "is.stodid.tictactoe.HelloWorld"
+mainClassName = "is.stodid.tictactoe.TicWeb"
 
 task distribution << {
     println "We build the zip with version=$version"
