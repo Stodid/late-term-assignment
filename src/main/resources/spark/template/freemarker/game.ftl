@@ -55,6 +55,7 @@
 				<div class="col-md-4">
 					<h3>thanks for playing</h3>
 					<h5>I love you</h5>
+                                        <h1>${one}</h1>
 				</div>
 				<div class="col-md-4"></div>
 			</div>

@@ -20,7 +20,7 @@ public class TicWeb implements SparkApplication{
         tic.init();
     }
     public void init() {
-        get(new Route("/") {
+        get(new Route("/tic") {
             @Override
             public Object handle(Request request, Response response) {
                 return "Tic!";
@@ -33,6 +33,15 @@ public class TicWeb implements SparkApplication{
                 Map<String, String> result = new HashMap<String, String>();
                 result.put("one", "asdfasdf");
                 return modelAndView(result, "asdf.ftl");
+            }
+        });
+
+        get(new FreeMarkerRoute("/") {
+            @Override
+            public ModelAndView handle(Request request, Response response) {
+                Map<String, String> result = new HashMap<String, String>();
+                result.put("one", "this is dynamically inserted by Ticweb.java");
+                return modelAndView(result, "game.ftl");
             }
         });
     }
