@@ -27,20 +27,19 @@ public class TicWeb implements SparkApplication{
             }
         });
 
-        get(new FreeMarkerRoute("/fr") {
-            @Override
-            public ModelAndView handle(Request request, Response response) {
-                Map<String, String> result = new HashMap<String, String>();
-                result.put("one", "asdfasdf");
-                return modelAndView(result, "asdf.ftl");
-            }
-        });
-
         get(new FreeMarkerRoute("/") {
             @Override
             public ModelAndView handle(Request request, Response response) {
                 Map<String, String> result = new HashMap<String, String>();
-                result.put("one", "this is dynamically inserted by Ticweb.java");
+                result.put("one", "1");
+                result.put("two", "2");
+                result.put("three", "3");
+                result.put("four", "4");
+                result.put("five", "5");
+                result.put("six", "6");
+                result.put("seven", "7");
+                result.put("eight", "8");
+                result.put("nine", "9");
                 return modelAndView(result, "game.ftl");
             }
         });
