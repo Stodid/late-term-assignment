@@ -23,7 +23,7 @@ public class TicWeb implements SparkApplication{
         get(new Route("/") {
             @Override
             public Object handle(Request request, Response response) {
-                return "Tic!";
+                return "Tac!";
             }
         });
 

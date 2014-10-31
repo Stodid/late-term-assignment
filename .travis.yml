@@ -1,3 +1,7 @@
 language: java
 jdk:
   - openjdk7
+deploy:
+  provider: heroku
+  api_key: 06374b56-a8db-44dc-9a95-5cd799332904
+  app: latetermoo
