@@ -22,7 +22,7 @@
 				<div class="col-md-4"></div>
 				<div class="col-md-4">
 					<h1>Tic Tac Toe</h1>
-					<h2>You can't touch this</h2>
+					<h2>This is better than diet coke</h2>
 				</div>
 				<div class="col-md-4"></div>
 			</div>
