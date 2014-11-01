@@ -1,13 +1,13 @@
 package is.stodid.tictactoe;
 
 public class Game {
-    private Board board;
+    private Board b;
     private Player player1;
     private Player player2;
     private int playerNr = 1;
 
     public Game() {
-        board = new Board();
+        b = new Board();
         initPlayers();
     }
 
@@ -16,8 +16,9 @@ public class Game {
         this.player2 = new Player(2);
     }
 
-    public void Play() {
-        if(board.isWinner() == 0) {
+    /*public void Play() {
+        if(b.isWinner() == 0) {
             
-    }
+        }            
+    }*/
 }
