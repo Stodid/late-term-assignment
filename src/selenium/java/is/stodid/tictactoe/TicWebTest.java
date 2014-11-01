@@ -14,7 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.*;
 import org.openqa.selenium.WebDriver;
 
-public class ChuckWebTest {
+public class TicWebTest {
 
     static WebDriver driver;
     static String baseUrl;
@@ -47,7 +47,7 @@ public class ChuckWebTest {
     @Test
     public void assertTitle() {
         driver.get(baseUrl + "/");
-        assertEquals("Tic Tac Toee", driver.getTitle());
+        assertEquals("Tic Tac Toe", driver.getTitle());
     }
 }
 
