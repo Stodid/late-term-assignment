@@ -2,7 +2,7 @@ package is.stodid.tictactoe;
 
 public class Board{
 
-	private int[][] board;
+	private int[][] board = new int[3][3];
 
 	public Board(){
 		for (int i = 0; i < 3; i++){
@@ -47,7 +47,7 @@ public class Board{
 		return(checkThree(board[0][0], board[1][1], board[2][2]) ||
 			   checkThree(board[2][0], board[1][1], board[0][2]));
 	}
-	private boolean checkThree(int A, int B, int C){
+	public boolean checkThree(int A, int B, int C){
 		if((A == B) && (B == C)){
 			return true;
 		}
