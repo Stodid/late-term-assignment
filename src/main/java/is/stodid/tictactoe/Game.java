@@ -1,16 +1,16 @@
 package is.stodid.tictactoe;
 
 public class Game {
-		public Board board = new Board();   
-	
-	public Game(){
+    private Board board;
+    private Player player1;
+    private Player player2;
 
-	}
-	
-
-    public static String hello() {
-        String greeting = "hello!";
-        return greeting;
+    public Game(){
+        board = new Board();
+        initPlayers();
     }
 
+    public void initPlayers(){
+          
+    }
 }
