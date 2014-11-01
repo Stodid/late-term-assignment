@@ -37,11 +37,15 @@ public class Board{
 	
 
 	private boolean columnWin(){
+		for (int i = 0; i < 3; i++){
+			return(checkThree(board[0][i], board[1][i], board[2][i]));
+		}
 		return true;
 	}
 	
 	private boolean diagonalWin(){
-		return true;
+		return(checkThree(board[0][0], board[1][1], board[2][2]) ||
+			   checkThree(board[2][0], board[1][1], board[0][2]));
 	}
 	private boolean checkThree(int A, int B, int C){
 		if((A == B) && (B == C)){
