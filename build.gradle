@@ -14,7 +14,8 @@ dependencies {
     compile 'org.slf4j:slf4j-api:1.7.5'
     testCompile 'junit:junit:4.11'
 
-    compile 'org.codehaus.groovy:groovy-all:2.3.6'
+    //compile 'net.joningi:icndb-java-api:1.0'
+    //compile 'org.codehaus.groovy:groovy-all:2.3.6'
     compile 'com.sparkjava:spark-template-freemarker:1.0'
     compile 'com.sparkjava:spark-core:1.1.1'
 
@@ -30,10 +31,8 @@ mainClassName = "is.stodid.tictactoe.TicWeb"
 task selenium(type: Test, dependsOn: installApp) {
     testClassesDir = sourceSets.selenium.output.classesDir
     classpath = sourceSets.selenium.runtimeClasspath
-
     ant.condition(property: "os", value: "windows") { os(family: "windows") }
     ant.condition(property: "os", value: "unix"   ) { os(family: "unix")    }
-
     doFirst {
         switch(ant.properties.os) {
             case 'unix':
@@ -62,31 +61,38 @@ task seleniumXvfb(type: Test, dependsOn: installApp) {
     }
 }
 
-task distribution << {
-    println "We build the zip with version=$version"
-}
-
-task release(dependsOn: 'distribution') << {
-    println 'We release now'
-}
-
-gradle.taskGraph.whenReady {taskGraph ->
-    if (taskGraph.hasTask(release)) {
-        version = '1.0'
-    } else {
-        version = '1.0-SNAPSHOT'
-    }
-}
-
-jar {
-    baseName = 'app'
-    version = '0.1'
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.1'
-}
+//task distribution << {
+//    println "We build the zip with version=$version"
+//}
+//
+//task release(dependsOn: 'distribution') << {
+//    println 'We release now'
+//}
+//
+//gradle.taskGraph.whenReady {taskGraph ->
+//    if (taskGraph.hasTask(release)) {
+//        version = '1.0'
+//    } else {
+//        version = '1.0-SNAPSHOT'
+//    }
+//}
+//
+//jar {
+//    baseName = 'app'
+//    version = '0.1'
+//}
+//
+//task wrapper(type: Wrapper) {
+//    gradleVersion = '2.1'
+//}
 
 task stage { 
     dependsOn installApp 
 }
+
+test {
+    testLogging {
+        exceptionFormat = 'full'
+    }
+}
+
