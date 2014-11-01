@@ -24,7 +24,7 @@ public class title {
 	@Test
 	public void testTitle() throws Exception {
 		selenium.open("/?gws_rd=ssl");
-		assertEquals("Google", selenium.getTitle());
+		assertEquals("Assrape", selenium.getTitle());
 	}
 
 	@After
