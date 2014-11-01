@@ -9,9 +9,4 @@ public class GameTest {
         org.junit.runner.JUnitCore.main("is.stodid.tictactoe.GameTest");
     }
 
-    @Test
-    public void testHello() {
-        assertEquals("hello!", Game.hello());
-    }
-	
 }
