@@ -7,4 +7,7 @@ public class Player {
 	public Player(){
 		player = null;
 	}
+	public Player(String p){
+		player = p;
+	}
 }
