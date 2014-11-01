@@ -8,4 +8,6 @@ public class Player {
     public Player(int player){
         this.player = player;
     }
+
+    public void play(Board board);
 }
