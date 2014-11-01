@@ -32,7 +32,7 @@ public class Board{
 		return 0;
 	}
 
-	private boolean checkWin(){
+	public boolean checkWin(){
 		return(rowWin() || columnWin() || diagonalWin());				
 	}
 	
@@ -62,7 +62,12 @@ public class Board{
 		return false;
 	}
 	public void insertMark(int row, int col, int player){
-		board[row][col] = player;
+		if(isLegal(row, col)){			
+			board[row][col] = player;	
+		}
+	}
+	private boolean isLegal(int row, int col){
+		return (board[row][col] == 0);
 	}
 
 }
