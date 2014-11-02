@@ -2,13 +2,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/style.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script language="javascript">
-    var DoPost
+<script>
     $(document).ready(function() {
-        DoPost = function(place) { 
-            $.post("/mark", { cell: place } );
+        $( ".cell" ).click(function(event) {
+            $.post("/mark", { cell: event.target.id } );
             $(location).attr('href',"/");
-        }
+        });
     });
 </script>
 <html>
@@ -34,19 +33,19 @@
 				<div class="col-md-3 col-md-offset-1">
 					<table class="tic">
 						<tr>
-							<td id="0" class="col-md-4" onclick="DoPost(0)">${zero}</td>
-							<td id="1" class="col-md-4" onclick="DoPost(1)">${one}</td>
-							<td id="2" class="col-md-4" onclick="DoPost(2)">${two}</td>
+							<td id="0" class="cell">${zero}</td>
+							<td id="1" class="cell">${one}</td>
+							<td id="2" class="cell">${two}</td>
 						</tr>
 						<tr>
-							<td id="3" class="col-md-4" onclick="DoPost(3)">${three}</td>
-							<td id="4" class="col-md-4" onclick="DoPost(4)">${four}</td>
-							<td id="5" class="col-md-4" onclick="DoPost(5)">${five}</td>
+							<td id="3" class="cell">${three}</td>
+							<td id="4" class="cell">${four}</td>
+							<td id="5" class="cell">${five}</td>
 						</tr>		
 						<tr>
-							<td id="6" class="col-md-4" onclick="DoPost(6)">${six}</td>
-							<td id="7" class="col-md-4" onclick="DoPost(7)">${seven}</td>
-							<td id="8" class="col-md-4" onclick="DoPost(8)">${eight}</td>
+							<td id="6" class="cell">${six}</td>
+							<td id="7" class="cell">${seven}</td>
+							<td id="8" class="cell">${eight}</td>
 						</tr>
 					</table>
 				</div>
