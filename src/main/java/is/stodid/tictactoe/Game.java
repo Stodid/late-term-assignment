@@ -44,9 +44,4 @@ public class Game {
             return "Player " + b.isWinner() + " won!";    
         }
     }
-
-    public static void reset() {
-        playerNr = 1;
-        b = new Board();
-    }
 }
