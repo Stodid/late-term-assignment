@@ -1,16 +1,24 @@
 package is.stodid.tictactoe;
 
 public class Game {
-		public Board board = new Board();   
-	
-	public Game(){
+    private Board b;
+    private Player player1;
+    private Player player2;
+    private int playerNr = 1;
 
-	}
-	
-
-    public static String hello() {
-        String greeting = "hello!";
-        return greeting;
+    public Game() {
+        b = new Board();
+        initPlayers();
     }
 
+    public void initPlayers() {
+        this.player1 = new Player(1);
+        this.player2 = new Player(2);
+    }
+
+    /*public void Play() {
+        if(b.isWinner() == 0) {
+            
+        }            
+    }*/
 }
