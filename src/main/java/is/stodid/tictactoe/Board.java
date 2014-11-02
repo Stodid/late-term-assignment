@@ -32,7 +32,7 @@ public class Board{
 		return 0;
 	}
 
-	private boolean checkWin(){
+	public boolean checkWin(){
 		return(rowWin() || columnWin() || diagonalWin());				
 	}
 	
@@ -61,8 +61,35 @@ public class Board{
 		}
 		return false;
 	}
-	public void insertMark(int row, int col, int player){
-		board[row][col] = player;
+	public void insertMark(int squareNum, int player){
+		switch(squareNum){
+			case 0:
+				board[0][0] = player;
+				break;
+			case 1:
+				board[0][1] = player;
+				break;
+			case 2:
+				board[0][2] = player;
+				break;
+			case 3:
+				board[1][0] = player;
+				break;
+			case 4:
+				board[1][1] = player;
+				break;
+			case 5:
+				board[1][2] = player;
+				break;
+			case 6:
+				board[2][0] = player;
+				break;
+			case 7:
+				board[2][1] = player;
+				break;
+			case 8:
+				board[2][2] = player;
+				break;
+		}
 	}
-
 }

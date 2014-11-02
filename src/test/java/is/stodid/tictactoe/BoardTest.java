@@ -19,10 +19,16 @@ public class BoardTest{
 		}
 	@Test
 		//A test to check if our array is empty using isBoardFull
-		public void isEmpty(){
+		public void isFull(){
 			assertEquals(false, b.isBoardFull());
 		}
-	/*@Test
-		public void 
-*/
+	@Test
+		public void checkWinner(){
+			assertEquals(0, b.isWinner());
+		}
+	@Test
+		public void checkWin(){
+			assertEquals(false, b.checkWin());
+		}
+
 }
