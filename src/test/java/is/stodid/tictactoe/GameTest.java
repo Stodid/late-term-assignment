@@ -11,6 +11,7 @@ public class GameTest {
 	
 	Game g = new Game();
 
+	//Can we switch players?
 	@Test
 	public void checkSwitchPlayer(){
 		assertEquals(2, g.switchPlayer(1));
