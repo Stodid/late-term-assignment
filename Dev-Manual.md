@@ -47,6 +47,8 @@ Gradle
 
 It is not required to install gradle to be able to use the development environment. The gradle wrapper will suffice, however it is recommended to go ahead and install it if one plans to use gradle a lot.
 
+Gradle is used to keep track of all required dependencies and sets up tasks for building the application. Gradle is the cornerstone of the application bild process, but thanks to the gradle wrapper all gradle tasks can be run without installing any third-party applications.
+
 * Instructions for Linux:
 ```
 add-apt-repository ppa:cwchien/gradle
@@ -61,6 +63,8 @@ brew install gradle
 
 Heroku
 --------
+
+Heroku is used to deploy for production. Travis will automatically deploy to heroku provided that all tests are passed.
 
 Heroku toolbelt is not required either, but it is very helpful for interacting with Heroku as a staging or production server.
 
@@ -78,6 +82,8 @@ If all goes well the app is up and running on https://latetermoo.herokuapp.com w
 
 Selenium
 ----------
+
+Selenium will run end-to-end tests on the code, assuring that the web application behaves as expected. To do selenium tests locally the command ```.gradlew selenium``` can be run. Travis will automatically do selenium tests after a commit to GitHub.
 
 Firefox is required (version 28.0 recommended) to run selenium tests locally. If development takes place in a GUI-less environmen xvfb must also be installed.
 
