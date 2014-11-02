@@ -12,7 +12,7 @@ public class TicTacToe {
     private static String numtomark(int num) {
         switch (num) {
             case 0:
-                return "&nbsp;";
+                return "&nbsp";
             case 1:
                 return "x";
             case 2:

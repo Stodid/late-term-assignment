@@ -34,7 +34,7 @@
 			<div class="row"></br></div>
 			<div class="row">
 				<div class="col-md-4"></div>
-				<div class="col-md-3 col-md-offset-1">
+				<div class="col-md-4">
 					<table class="tic">
 						<tr>
 							<td id="0" class="cell">${zero}</td>
@@ -66,8 +66,8 @@
 			<div class="row">
 				<div class="col-md-4"></div>
 				<div class="col-md-4">
-					<button class="btn btn-info" id="play">Play</button>
-					<button class="btn btn-warning reset" id="restart">Restart</button>
+					<!-- <button class="btn btn-info" id="play">Play</button> -->
+					<button class="btn btn-info reset" id="restart">Restart</button>
 				</div>
 				<div class="col-md-4"></div>
 			</div>

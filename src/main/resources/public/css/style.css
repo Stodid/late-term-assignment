@@ -1,12 +1,16 @@
 table.tic {
 	border:none;
 	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+	width: 180px;
 }
 
 table.tic td {
 	border-left: 3px solid #000;
 	border-right: 3px solid #000;
-	height: 33%:
+	height: 33%;
+	font-family: "Consolas", "Lucida Console", monospace;
 }
 
 table.tic tr {
