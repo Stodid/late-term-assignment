@@ -8,4 +8,3 @@ deploy:
 script:
  - ./gradlew check
  - ./gradlew seleniumXvfb
- bundle exec rake assets:precompile
