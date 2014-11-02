@@ -37,6 +37,7 @@ public class TicTacToe {
         out.put("six",   String.valueOf(numtomark(b.board[2][0])));
         out.put("seven", String.valueOf(numtomark(b.board[2][1])));
         out.put("eight", String.valueOf(numtomark(b.board[2][2])));
+        out.put("status", game.status());
 
         return out;
     }

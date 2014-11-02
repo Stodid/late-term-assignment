@@ -23,7 +23,7 @@
 				<div class="col-md-4"></div>
 				<div class="col-md-4">
 					<h1 class="text-center">Tic Tac Toe</h1>
-					<h2 class="text-center">This is better than diet coke</h2>
+					<h2 class="text-center">${status}</h2>
 				</div>
 				<div class="col-md-4"></div>
 			</div>
