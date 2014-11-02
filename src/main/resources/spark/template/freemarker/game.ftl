@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/style.css">
 <style type="text/css">
 	td {
 	   font-size: 36px;
@@ -21,30 +22,30 @@
 			<div class="row">
 				<div class="col-md-4"></div>
 				<div class="col-md-4">
-					<h1>Tic Tac Toe</h1>
-					<h2>This is better than diet coke</h2>
+					<h1 class="text-center">Tic Tac Toe</h1>
+					<h2 class="text-center">This is better than diet coke</h2>
 				</div>
 				<div class="col-md-4"></div>
 			</div>
 			<div class="row"></br></div>
 			<div class="row">
 				<div class="col-md-4"></div>
-				<div class="col-md-4">
-					<table class="table-bordered">
+				<div class="col-md-3 col-md-offset-1">
+					<table class="tic">
 						<tr>
-							<td id="1">${one}</td>
-							<td id="2">${two}</td>
-							<td id="3">${three}</td>
+							<td id="1" class="col-md-4" onclick="location.href='yourpage.html'">${one}</td>
+							<td id="2" class="col-md-4">${two}</td>
+							<td id="3" class="col-md-4">${three}</td>
 						</tr>
 						<tr>
-							<td id="4">${four}</td>
-							<td id="5">${five}</td>
-							<td id="6">${six}</td>
+							<td id="4" class="col-md-4">${four}</td>
+							<td id="5" class="col-md-4">${five}</td>
+							<td id="6" class="col-md-4">${six}</td>
 						</tr>		
 						<tr>
-							<td id="7">${seven}</td>
-							<td id="8">${eight}</td>
-							<td id="9">${nine}</td>
+							<td id="7" class="col-md-4">${seven}</td>
+							<td id="8" class="col-md-4">${eight}</td>
+							<td id="9" class="col-md-4">${nine}</td>
 						</tr>
 					</table>
 				</div>
