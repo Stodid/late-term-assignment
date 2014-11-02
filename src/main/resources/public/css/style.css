@@ -34,3 +34,12 @@ table.tic tr:last-child {
 * {
     text-align: center;
 }
+
+td {
+   font-size: 36px;
+   color: grey;
+}
+
+h1 {
+        color: orange;
+}
