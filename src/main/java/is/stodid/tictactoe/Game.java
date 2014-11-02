@@ -5,7 +5,7 @@ public class Game {
     private Player player1;
     private Player player2;
     private int playerNr = 1;
-    private int square = 1;
+    private int squareNr = 1;
 
     public Game() {
         b = new Board();
@@ -20,10 +20,8 @@ public class Game {
 
     public void Play() {
         while(b.isWinner() == 0 || !b.isBoardFull()) {
-           // if(playerNr == 1)
-               // b.insertMark(square, playerNr);
-           // else
-              //  b.insertMark(square, playerNr);
+            b.insertMark(squareNr, playerNr);
+            playerNr = switchPlayer(playerNr);
         }
 
         if(b.isWinner() == 0 && b.isBoardFull()) {
@@ -33,5 +31,12 @@ public class Game {
             int winner = b.isWinner();
             System.out.println("Player : " + winner + "has won");
         }
+    }
+
+    public int switchPlayer(int playerNr) {
+        if(playerNr == 1)
+            return 2;
+        else
+            return 1;
     }
 }
