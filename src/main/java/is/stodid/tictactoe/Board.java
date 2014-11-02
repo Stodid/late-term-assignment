@@ -2,7 +2,7 @@ package is.stodid.tictactoe;
 
 public class Board{
 
-	private int[][] board = new int[3][3];
+	public int[][] board = new int[3][3];
 	private int winner = 0;
 
 	public Board(){
@@ -13,16 +13,14 @@ public class Board{
 		}
 	}	
 	public boolean isBoardFull(){
-		boolean isFull = true;
-
 		for (int i = 0; i < 3; i++){
 			for (int j = 0; j < 3; j++){
 				if(board[i][j] == 0){
-					isFull = false;
+					return false;
 				}
 			}	
 		}
-		return isFull;
+		return true;
 	}
 
 	public int isWinner(){
@@ -36,21 +34,25 @@ public class Board{
 		return(rowWin() || columnWin() || diagonalWin());				
 	}
 	
-	private boolean rowWin(){
+	public boolean rowWin(){
 		for (int i = 0; i < 3; i++){
-			return(checkThree(board[i][0], board[i][1], board[i][2]));
+			if(checkThree(board[i][0], board[i][1], board[i][2]) == true){
+				return true;
+			}
 		}
 		return false;
 	}
 	
-	private boolean columnWin(){
+	public boolean columnWin(){
 		for (int i = 0; i < 3; i++){
-			return(checkThree(board[0][i], board[1][i], board[2][i]));
+			if(checkThree(board[0][i], board[1][i], board[2][i]) == true){
+				return true;
+			}
 		}
 		return false;
 	}
 	
-	private boolean diagonalWin(){
+	public boolean diagonalWin(){
 		return(checkThree(board[0][0], board[1][1], board[2][2]) ||
 			   checkThree(board[2][0], board[1][1], board[0][2]));
 	}

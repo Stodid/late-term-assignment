@@ -2,15 +2,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/style.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<style type="text/css">
-	td {
-	   font-size: 36px;
-	   color: grey;
-	}
-	h1 {
-		color: orange;
-	}
-</style>
 <script language="javascript"> 
     function DoPost(place, num){
         $.post("/mark", { cell: place, mark: num } );
