@@ -43,6 +43,6 @@ public class TicTacToe {
     }
 
     public static void reset() {
-        game.reset();
+        game = new Game();
     }
 }

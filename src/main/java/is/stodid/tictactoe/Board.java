@@ -22,19 +22,19 @@ public class Board{
 		}
 		return true;
 	}
-
+	//isWinner returns the integer value of the player that has won.
 	public int isWinner(){
 		if(checkWin()){
 			return winner;
 		}
 		return 0;
 	}
-
+	//Checks if there is a horizontal, vertical or diagonal win.
 	public boolean checkWin(){
 		return(rowWin() || columnWin() || diagonalWin());				
 	}
-	
-	public boolean rowWin(){
+	//Compares the three integers in each row and checks if there's a win.
+	private boolean rowWin(){
 		for (int i = 0; i < 3; i++){
 			if(checkThree(board[i][0], board[i][1], board[i][2]) == true){
 				return true;
@@ -42,8 +42,8 @@ public class Board{
 		}
 		return false;
 	}
-	
-	public boolean columnWin(){
+	//Compares the three integers in each column and checks if there's a win.
+	private boolean columnWin(){
 		for (int i = 0; i < 3; i++){
 			if(checkThree(board[0][i], board[1][i], board[2][i]) == true){
 				return true;
@@ -51,18 +51,21 @@ public class Board{
 		}
 		return false;
 	}
-	
-	public boolean diagonalWin(){
+	//Compares both diagonal lines and checks if either one has a win.
+	private boolean diagonalWin(){
 		return(checkThree(board[0][0], board[1][1], board[2][2]) ||
 			   checkThree(board[2][0], board[1][1], board[0][2]));
 	}
-	public boolean checkThree(int A, int B, int C){
+	//Compares three integers to see if they are the same (and not 0).
+	private boolean checkThree(int A, int B, int C){
 		if(((A == B) && (B == C)) && A != 0){
 			winner = A;
 			return true;
 		}
 		return false;
 	}
+	//Takes an integer and places the current players number in the corresponding square.
+	//If there is already a mark in the square, insert mark returns false.
 	public boolean insertMark(int squareNum, int player){
 		switch(squareNum){
 			case 0:
