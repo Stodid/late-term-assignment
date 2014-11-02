@@ -4,7 +4,7 @@ Administration Manual
 Instructions
 ------------
 
-This manual is inted to give a quick overview of how to download and run the application tic-tac-toe. All instructions are aimed towards linux users and we recommend using Firefox to use the application (when it has been run).
+This manual is intended to give a quick overview of how to download and run the application tic-tac-toe. All instructions are aimed towards linux users and we recommend using Firefox to use the application (when it has been run).
 
 Java JDK 
 ---------
