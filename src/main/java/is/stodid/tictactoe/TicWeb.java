@@ -19,28 +19,18 @@ public class TicWeb implements SparkApplication{
         if (port != null) {
             setPort(Integer.valueOf(port));
         }
-        result.put("one", "1");
-        result.put("two", "2");
-        result.put("three", "3");
-        result.put("four", "4");
-        result.put("five", "5");
-        result.put("six", "6");
-        result.put("seven", "7");
-        result.put("eight", "8");
-        result.put("nine", "9");
+        result.put("zero",  "&nbsp;");
+        result.put("one",   "&nbsp;");
+        result.put("two",   "&nbsp;");
+        result.put("three", "&nbsp;");
+        result.put("four",  "&nbsp;");
+        result.put("five",  "&nbsp;");
+        result.put("six",   "&nbsp;");
+        result.put("seven", "&nbsp;");
+        result.put("eight", "&nbsp;");
         tic.init();
     }
     public void init() {
-
-        get(new FreeMarkerRoute("/tic") {
-            @Override
-            public ModelAndView handle(Request request, Response response) {
-                //response.body("fucky");
-                //return null;
-                return modelAndView(result, "tic.ftl");
-            }
-        });
-
         get(new FreeMarkerRoute("/") {
             @Override
             public ModelAndView handle(Request request, Response response) {
@@ -51,8 +41,12 @@ public class TicWeb implements SparkApplication{
         post(new FreeMarkerRoute("/mark") {
             @Override
             public Object handle(Request request, Response response) {
-                result.put("one", "gisli");
-                response.redirect("/tic");
+                //StringBuffer myParam = new StringBuffer(request.params(":mark"));
+                String cell = request.queryParams("cell");
+                String mark = request.queryParams("mark");
+                result.put(cell, mark);
+                //result.put("one", "mark");
+                response.redirect("/");
                 return null;
             }
         });
