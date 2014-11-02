@@ -2,11 +2,14 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/style.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script language="javascript"> 
-    function DoPost(place){
-        $.post("/mark", { cell: place } );
-        $(location).attr('href',"/");
-    }
+<script language="javascript">
+    var DoPost
+    $(document).ready(function() {
+        DoPost = function(place) { 
+            $.post("/mark", { cell: place } );
+            $(location).attr('href',"/");
+        }
+    });
 </script>
 <html>
 	<head>

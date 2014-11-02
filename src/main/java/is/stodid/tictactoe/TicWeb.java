@@ -19,15 +19,6 @@ public class TicWeb implements SparkApplication{
         if (port != null) {
             setPort(Integer.valueOf(port));
         }
-        //result.put("zero",  "&nbsp;");
-        //result.put("one",   "&nbsp;");
-        //result.put("two",   "&nbsp;");
-        //result.put("three", "&nbsp;");
-        //result.put("four",  "&nbsp;");
-        //result.put("five",  "&nbsp;");
-        //result.put("six",   "&nbsp;");
-        //result.put("seven", "&nbsp;");
-        //result.put("eight", "&nbsp;");
         tic.init();
     }
     public void init() {
@@ -42,12 +33,8 @@ public class TicWeb implements SparkApplication{
         post(new FreeMarkerRoute("/mark") {
             @Override
             public Object handle(Request request, Response response) {
-                //StringBuffer myParam = new StringBuffer(request.params(":mark"));
                 String cell = request.queryParams("cell");
-                //String mark = request.queryParams("mark");
                 tictactoe.in(cell);
-                //result.put(cell, mark);
-                //result.put("one", "mark");
                 response.redirect("/");
                 return null;
             }
