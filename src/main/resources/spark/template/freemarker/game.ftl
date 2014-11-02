@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <style type="text/css">
 	td {
 	   font-size: 36px;
@@ -10,6 +11,15 @@
 		color: orange;
 	}
 </style>
+<script language="javascript"> 
+    function DoPost(num){
+        $.post("/mark", { mark: num } );
+        $(location).attr('href',"/");
+    }
+    function asdf() {
+        $(location).attr('href',"http://www.google.is");
+    }
+</script>
 <html>
 	<head>
 		<title>Tic Tac Toe</title>
@@ -33,7 +43,7 @@
 				<div class="col-md-3 col-md-offset-1">
 					<table class="tic">
 						<tr>
-							<td id="1" class="col-md-4" onclick="location.href='yourpage.html'">${one}</td>
+							<td id="1" class="col-md-4" onclick="DoPost(0)">${one}</td>
 							<td id="2" class="col-md-4">${two}</td>
 							<td id="3" class="col-md-4">${three}</td>
 						</tr>
