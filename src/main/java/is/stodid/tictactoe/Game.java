@@ -38,7 +38,7 @@ public class Game {
             return "It's a draw!";
         }
         else if(b.isWinner() == 0) {
-            return  "It's Player " + playerNr + "'s turn";
+            return  "Player " + playerNr + "'s turn";
         }
         else {
             return "Player " + b.isWinner() + " won!";    
