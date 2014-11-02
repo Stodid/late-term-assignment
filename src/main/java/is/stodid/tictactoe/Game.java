@@ -20,8 +20,11 @@ public class Game {
 
     public void Play() {
         while(b.isWinner() == 0 || !b.isBoardFull()) {
-            b.insertMark(squareNr, playerNr);
-            playerNr = switchPlayer(playerNr);
+            if(b.insertMark(squareNr, playerNr)){
+				playerNr = switchPlayer(playerNr);
+			}
+			else 
+				continue;
         }
 
         if(b.isWinner() == 0 && b.isBoardFull()) {

@@ -61,35 +61,54 @@ public class Board{
 		}
 		return false;
 	}
-	public void insertMark(int squareNum, int player){
+	public boolean insertMark(int squareNum, int player){
 		switch(squareNum){
 			case 0:
-				board[0][0] = player;
-				break;
+                if(board[0][0] != 0)
+                    return false;
+                board[0][0] = player;
+                break;
 			case 1:
+                if(board[0][1] != 0)
+                    return false;
 				board[0][1] = player;
 				break;
 			case 2:
+                if(board[0][2] != 0)
+                    return false;
 				board[0][2] = player;
 				break;
 			case 3:
+                if(board[1][0] != 0)
+                    return false;
 				board[1][0] = player;
 				break;
 			case 4:
+                if(board[1][1] != 0)
+                    return false;
 				board[1][1] = player;
 				break;
 			case 5:
+                if(board[1][2] != 0)
+                    return false;
 				board[1][2] = player;
 				break;
 			case 6:
+                if(board[2][0] != 0)
+                    return false;
 				board[2][0] = player;
 				break;
 			case 7:
+                if(board[2][1] != 0)
+                    return false;
 				board[2][1] = player;
 				break;
 			case 8:
+                if(board[2][2] != 0)
+                    return false;
 				board[2][2] = player;
 				break;
 		}
+        return true;
 	}
 }
