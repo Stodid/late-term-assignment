@@ -3,8 +3,8 @@
 <link rel="stylesheet" href="/css/style.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script language="javascript"> 
-    function DoPost(place, num){
-        $.post("/mark", { cell: place, mark: num } );
+    function DoPost(place){
+        $.post("/mark", { cell: place } );
         $(location).attr('href',"/");
     }
 </script>
@@ -31,19 +31,19 @@
 				<div class="col-md-3 col-md-offset-1">
 					<table class="tic">
 						<tr>
-							<td id="0" class="col-md-4" onclick="DoPost('zero', 'x')">${zero}</td>
-							<td id="1" class="col-md-4" onclick="DoPost('one', 'x')">${one}</td>
-							<td id="2" class="col-md-4" onclick="DoPost('two', 'x')">${two}</td>
+							<td id="0" class="col-md-4" onclick="DoPost(0)">${zero}</td>
+							<td id="1" class="col-md-4" onclick="DoPost(1)">${one}</td>
+							<td id="2" class="col-md-4" onclick="DoPost(2)">${two}</td>
 						</tr>
 						<tr>
-							<td id="3" class="col-md-4" onclick="DoPost('three', 'x')">${three}</td>
-							<td id="4" class="col-md-4" onclick="DoPost('four', 'x')">${four}</td>
-							<td id="5" class="col-md-4" onclick="DoPost('five', 'x')">${five}</td>
+							<td id="3" class="col-md-4" onclick="DoPost(3)">${three}</td>
+							<td id="4" class="col-md-4" onclick="DoPost(4)">${four}</td>
+							<td id="5" class="col-md-4" onclick="DoPost(5)">${five}</td>
 						</tr>		
 						<tr>
-							<td id="6" class="col-md-4" onclick="DoPost('six', 'x')">${six}</td>
-							<td id="7" class="col-md-4" onclick="DoPost('seven', 'x')">${seven}</td>
-							<td id="8" class="col-md-4" onclick="DoPost('eight', 'x')">${eight}</td>
+							<td id="6" class="col-md-4" onclick="DoPost(6)">${six}</td>
+							<td id="7" class="col-md-4" onclick="DoPost(7)">${seven}</td>
+							<td id="8" class="col-md-4" onclick="DoPost(8)">${eight}</td>
 						</tr>
 					</table>
 				</div>

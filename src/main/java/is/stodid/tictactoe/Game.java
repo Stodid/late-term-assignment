@@ -1,11 +1,11 @@
 package is.stodid.tictactoe;
 
 public class Game {
-    private Board b;
+    private static Board b;
    // private Player player1;
    // private Player player2;
-    private int playerNr;
-    private int squareNr = 1;
+    private static int playerNr;
+    //private int squareNr = 1;
 
     public Game() {
         b = new Board();
@@ -19,23 +19,23 @@ public class Game {
         this.player2 = new Player(2);
     }*/
 
-    public void Play() {
-        while(b.isWinner() == 0 || !b.isBoardFull()) {
+    public static void play(int squareNr) {
+        if(b.isWinner() == 0 || !b.isBoardFull()) {
             if(b.insertMark(squareNr, playerNr)){
 				playerNr = switchPlayer(playerNr);
 			}
-			else 
-				continue;
+			//else 
+			//	continue; þetta er óþarfi
         }
-        if(b.isWinner() == 0 && b.isBoardFull()) {
-            System.out.println("Draw!");
-		//	return false;
-        }
-        else {
-            int winner = b.isWinner();
-            System.out.println("Player : " + winner + "has won");
-		//	return false;
-		}
+        //if(b.isWinner() == 0 && b.isBoardFull()) {
+        //    System.out.println("Draw!");
+		////	return false;
+        //}
+        //else {
+        //    int winner = b.isWinner();
+        //    System.out.println("Player : " + winner + "has won");
+		////	return false;
+		//}
     }
 
     public static int switchPlayer(int playerNr) {
@@ -50,4 +50,12 @@ public class Game {
 		Game g = new Game();
 				
 		}	*/
+    public static void in(int square) {
+        play(square);
+    }
+
+    public static Board out() {
+        Board board = b;
+        return board;
+    }
 }
