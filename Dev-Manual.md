@@ -47,7 +47,7 @@ Gradle
 
 It is not required to install gradle to be able to use the development environment. The gradle wrapper will suffice, however it is recommended to go ahead and install it if one plans to use gradle a lot.
 
-Gradle is used to keep track of all required dependencies and sets up tasks for building the application. Gradle is the cornerstone of the application bild process, but thanks to the gradle wrapper all gradle tasks can be run without installing any third-party applications.
+Gradle is used to keep track of all required dependencies and sets up tasks for building the application. Gradle is the cornerstone of the application build process, but thanks to the gradle wrapper all gradle tasks can be run without installing any third-party applications.
 
 * Instructions for Linux:
 ```
