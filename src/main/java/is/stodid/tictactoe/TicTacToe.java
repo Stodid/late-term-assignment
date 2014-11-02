@@ -41,4 +41,8 @@ public class TicTacToe {
 
         return out;
     }
+
+    public static void reset() {
+        game.reset();
+    }
 }

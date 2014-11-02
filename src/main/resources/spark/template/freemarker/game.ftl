@@ -8,6 +8,10 @@
             $.post("/mark", { cell: event.target.id } );
             $(location).attr('href',"/");
         });
+        $( ".reset" ).click(function() {
+            $.post("/reset", { } );
+            $(location).attr('href',"/");
+        });
     });
 </script>
 <html>
@@ -63,7 +67,7 @@
 				<div class="col-md-4"></div>
 				<div class="col-md-4">
 					<button class="btn btn-info" id="play">Play</button>
-					<button class="btn btn-warning" id="restart">Restart</button>
+					<button class="btn btn-warning reset" id="restart">Restart</button>
 				</div>
 				<div class="col-md-4"></div>
 			</div>

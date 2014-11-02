@@ -39,5 +39,14 @@ public class TicWeb implements SparkApplication{
                 return null;
             }
         });
+
+        post(new FreeMarkerRoute("/reset") {
+            @Override
+            public Object handle(Request request, Response response) {
+                response.redirect("/");
+                tictactoe.reset();
+                return null;
+            }
+        });
     }
 }

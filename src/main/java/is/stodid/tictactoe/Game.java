@@ -15,15 +15,6 @@ public class Game {
 				playerNr = switchPlayer(playerNr);
 			}
         }
-        //if(b.isWinner() == 0 && b.isBoardFull()) {
-        //    System.out.println("Draw!");
-		////	return false;
-        //}
-        //else {
-        //    int winner = b.isWinner();
-        //    System.out.println("Player : " + winner + "has won");
-		////	return false;
-		//}
     }
 
     public static int switchPlayer(int playerNr) {
@@ -52,5 +43,10 @@ public class Game {
         else {
             return "Player " + b.isWinner() + " won!";    
         }
+    }
+
+    public static void reset() {
+        playerNr = 1;
+        b = new Board();
     }
 }
